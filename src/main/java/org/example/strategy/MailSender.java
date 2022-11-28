@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class MailSender {
     public static void main(String[] args) throws MailjetException, MailjetSocketTimeoutException {
-        MailInfo mailInfo =  new MailInfo(new GiftMail(), new Client("Yaryna", "yaryna.fialko@ucu.edu.ua"));
+        MailInfo mailInfo =  new MailInfo(new GiftMail(), new Client("hello", "hello@ucu.edu.ua"));
         Client user = mailInfo.getClient();
 
         MailjetClient client;
@@ -23,8 +23,8 @@ public class MailSender {
                 .property(Emailv31.MESSAGES, new JSONArray()
                         .put(new JSONObject()
                                 .put(Emailv31.Message.FROM, new JSONObject()
-                                        .put("Email", "yaryna.fialko@ucu.edu.ua")
-                                        .put("Name", "Yaryna"))
+                                        .put("Email", "hello@ucu.edu.ua")
+                                        .put("Name", "hello"))
                                 .put(Emailv31.Message.TO, new JSONArray()
                                         .put(new JSONObject()
                                                 .put("Email", user.getEmail())
